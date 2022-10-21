@@ -1,0 +1,13 @@
+plugin: community.general.proxmox
+user: root@pam
+password: somepass
+url: https://somehost:8006
+validate_certs: false
+want_proxmox_nodes_ansible_host: true
+want_facts: true
+keyed_groups:
+  - key: proxmox_tags_parsed
+    seperator: ""
+    prefix: group
+groups:
+  debboxes: "'deb' in (proxmox_tags_parsed|list)"
