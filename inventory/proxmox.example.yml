@@ -10,4 +10,4 @@ keyed_groups:
     seperator: ""
     prefix: group
 groups:
-  debboxes: "'deb' in (proxmox_tags_parsed|list)"
+  examplegroup: "'deb' in (proxmox_tags_parsed|list)"
